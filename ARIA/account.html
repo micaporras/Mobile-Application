@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ARIA</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" href="img/ARIA.png" type="image/x-icon"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/aeeb884994.js" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container1">
+                <a href="index.html" class="ARIA"><h5>ARIA</h5></a>
+                <div class="menu-bar">
+                    <nav>
+                    <ul>
+                        <li><a href="home.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span>
+                            </a></li>
+                         <li><a href="calendar.html">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>Calendar</span>
+                            </a></li>  
+                        <li><a href="to-do.html">
+                            <i class="fa-solid fa-list"></i>
+                            <span>To-Do</span>
+                            </a></li>
+                        <li><a href="habit.html">
+                            <i class="fa-solid fa-person-walking"></i>
+                            <span>Habit Tracker</span>
+                            </a></li>
+                        <li><a href="braindump.html">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>Brain Dump</span>
+                            </a></li>
+                        <li class="active"><a href="account.html">
+                            <i class="fa-solid fa-circle-user user"></i>
+                            <span>Account</span>
+                            </a></li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="accountSec">
+                <div class="accountTab">
+                    <form>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-address-card"></i>
+                                <a id="userLink" href="#">Username</a>
+                            </li>
+                            <li>
+                                <a id="signOutLink" href="#">Sign Out</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <script src="js/index.js" type="module"></script>
+        <script>
+            let userLink = document.getElementById('userLink');
+            let signOutLink = document.getElementById('signOutLink');
+            let delAccLink = document.getElementById('delAccLink');
+            var cuurentUser = null;
+
+            function getUsername() {
+                let keepLoggedIn = localStorage.getItem("keepLoggedIn");
+
+                if (keepLoggedIn == "yes") {
+                    cuurentUser = JSON.parse(localStorage.getItem('user'));
+                }
+
+                else {
+                    cuurentUser = JSON.parse(sessionStorage.getItem('user'));
+                }
+            }
+
+            function signOut() {
+                sessionStorage.removeItem('user');
+                localStorage.removeItem('user');
+                localStorage.removeItem('keepLoggedIn');
+                window.location = "login.html"
+            }
+
+         window.onload = function() {
+                getUsername();
+
+                userLink.innerText = `Hi, ${cuurentUser.username}!`;
+                userLink.href = "home.html"
+
+                signOutLink.innerText = "Sign Out";
+                signOutLink.addEventListener('click', () => {
+                    signOut();
+                    alert('Signed Out Successfully')
+                });
+            }
+        </script>
+    </body>
+    
+</html>

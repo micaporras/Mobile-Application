@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="css/habit.css">
+    <link rel="icon" type="image/x-icon" href="img/ARIA.png">
+    <script src="https://kit.fontawesome.com/aeeb884994.js" 
+    crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <a href="index.html" class="ARIA"><h5>ARIA</h5></a>
+            <div class="menu-bar">
+                <nav>
+                <ul>
+                    <li><a href="home.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                        </a></li>
+                     <li><a href="calendar.html">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Calendar</span>
+                        </a></li>  
+                    <li><a href="to-do.html">
+                        <i class="fa-solid fa-list"></i>
+                        <span>To-Do</span>
+                        </a></li>
+                    <li class="active"><a href="habit.html">
+                        <i class="fa-solid fa-person-walking"></i>
+                        <span>Habit Tracker</span>
+                        </a></li>
+                    <li><a href="braindump.html">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>Brain Dump</span>
+                        </a></li>
+                    <li><a href="account.html">
+                        <i class="fa-solid fa-circle-user user"></i>
+                        <span>Account</span>
+                        </a></li>
+                </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    
+    <div class="container">
+        <!--Title and Sub-->
+        <h1 id="title">Month</h1>
+        <h2  id="subtitle">Monthly Habit Tracker</h2>
+    <!--Mini Calendar-->
+    <div id="calendarContainer">
+        <div id="calendarDiv">
+            <div id="calendarHeading">
+                <div class="name"><p id="habitTitle"><b>New Habit</b></p></div>
+                <div class="habitName">
+                <input class="habitInput" placeholder="New Habit">
+                <i class="fa-solid fa-circle-check check"></i></div>
+                <p id="totalDays">0/31</p>
+            </div>
+            <div id="calendarContent">
+                <div id="tracker">
+                    <div class="days">
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                    </div>
+                    <div class="days">
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                    </div>
+                    <div class="days">
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                    </div>
+                    <div class="days">
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                    </div>
+                    <div class="days">
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                        <div class="day">1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br><button id="resetButton">Reset Habit</button>
+</body>
+
+
+<!--JavaScript-->
+<script src="js/habit.js"></script>
+</html>

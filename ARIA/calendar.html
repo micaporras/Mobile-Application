@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ARIA</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" href="img/ARIA.png" type="image/x-icon"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/aeeb884994.js" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container1">
+                <a href="index.html" class="ARIA"><h5>ARIA</h5></a>
+                <div class="menu-bar">
+                    <nav>
+                    <ul>
+                        <li><a href="home.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span>
+                            </a></li>
+                         <li  class="active"><a href="calendar.html">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>Calendar</span>
+                            </a></li>  
+                        <li><a href="to-do.html">
+                            <i class="fa-solid fa-list"></i>
+                            <span>To-Do</span>
+                            </a></li>
+                        <li><a href="habit.html">
+                            <i class="fa-solid fa-person-walking"></i>
+                            <span>Habit Tracker</span>
+                            </a></li>
+                        <li><a href="braindump.html">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>Brain Dump</span>
+                            </a></li>
+                        <li><a href="account.html">
+                            <i class="fa-solid fa-circle-user user"></i>
+                            <span>Account</span>
+                            </a></li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="calendar-container">
+            <div class="left">
+                <div class="calendar">
+                    <div class="calendar-title">University Calendar</div>
+                    <div class="month">
+                        <i class="fa-solid fa-chevron-left prev"></i>
+                        <div class="date"></div>
+                        <i class="fa-solid fa-chevron-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>sun</div>
+                        <div>mon</div>
+                        <div>tues</div>
+                        <div>wed</div>
+                        <div>thurs</div>
+                        <div>fri</div>
+                        <div>sat</div>
+                    </div>
+                    <div class="days">
+                    </div>
+                    <div class="go-to">
+                        <button class="today-button">go to today</button>
+                    </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="today-date">
+                <div class="event-day">Thurs</div>
+                <div class="event-date">14 July 2023</div>
+                <i class="fa-solid fa-xmark exit"></i>
+            </div>
+            <div class="events">
+            </div>
+            <div class="add-event-wrapper">
+                <div class="add-event-header">
+                    <div class="title">Add Event</div>
+                    <i class="fa-solid fa-xmark close"></i>
+                </div>
+                <div class="add-event-body">
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Event" class="event-name" />
+                    </div>
+                    <div class="add-event">
+                        <button class="add-button">add</button>
+                    </div>
+                </div>
+            </div>
+            <button class="add-events">
+                <i class="fa-regular fa-square-plus"></i>
+            </button>
+        </div>
+    </body>
+    <script src="js/calendar.js"></script>
+    <script src="js/index.js" type="module"></script>
+</html>

@@ -1,0 +1,504 @@
+* {
+    font-family: 'Agdasima', sans-serif;
+}
+
+body{
+    background-size: 500px;
+    background: rgb(14, 125, 145);
+    text-align: center;
+}
+
+#title{
+    line-height: 10px;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: rgb(23, 86, 86);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin: 100px auto 20px;
+    max-width: 100px;
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+
+  .container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content:flex-start;
+    max-width: 1600px;
+    padding-left: 8px;
+    padding-right: 8px;
+    align-items: center;
+    max-height: 10vh;
+    margin-top: 2%;
+  }
+
+  .container1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1600px;
+    padding-left: 8px;
+    padding-right: 8px;
+    align-items: center;
+    max-height: 10vh;
+    margin-top: 2%;
+  }
+
+  .ARIA {
+    text-decoration: none;
+    color: aqua;
+    margin-left:  0%;
+    margin-top: 0;
+  }
+
+  .ARIA h5 {
+    font-size: 50px;
+    color: aqua;
+  }
+
+  .ARIA h2 {
+    font-size: 5vh;
+    font-style: normal;
+  }
+
+
+  #ARIA2 {
+    width: 100%;
+    height: 18vh;
+    position: relative;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+
+  .tagline {
+    margin-left: -5%;
+    margin-top: 3%;
+    color: white;
+  }
+}
+
+nav {
+  display: inline-flex;
+  z-index: 99;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  background-color: inherit;
+  font-size: 3vh;
+  display: block;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,  
+nav ul li.active a {
+  color: aqua;
+}
+
+.menu-bar {
+  display: flex;
+  margin-left: 0%;
+}
+
+.menu-bar a span {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.menu-bar li:hover a, 
+.menu-bar li.active a {
+  transform: translateY(-5px);
+  font-size: 25px;
+}
+
+.menu-bar li:hover a span, 
+.menu-bar li.active a span {
+  height: 18px;
+}
+
+a {
+  color: white;
+  font-size: 3vh;
+  text-decoration: none;
+}
+
+
+#subtitle{
+    font-size: 18px;
+    color: white;
+}
+
+#calendarContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#calendarDiv{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 10px 20px 20px;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+#calendarHeading{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    padding: 0px 20px;
+    font-size: 20px;
+    background-color: rgb(37, 105, 105);
+    line-height: 0px;
+    color: white;
+}
+
+#calendarContent{
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.days{
+    display: flex;
+}
+
+.day{
+    width: 30px;
+    margin: 3px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(14, 125, 145);
+    font-weight: 600;
+    /* background-color: aqua; */
+    /* border: 2px solid black; */
+}
+
+.habitInput{
+    outline: none;
+    border-radius: 8px;
+    height: 100%;
+    font-size: 2.5vh;
+    background-color: rgb(37, 105, 105);
+    color: white;
+    border-color: aqua;
+}
+
+.habitInput::placeholder {
+    color: white;
+    font-weight: 600;
+}
+
+.habitName {
+    opacity: 0;
+    margin-left: -70%;
+    height: 100%;
+    margin-top: 1%;
+}
+
+.habitName.active {
+    opacity: 1;
+}
+
+.habitName i {
+    margin-top: 2%;
+    color: aqua;
+    cursor: pointer;
+}
+
+.habitName i:hover {
+    color: white;
+}
+
+.name {
+    cursor: pointer;
+    height: 100%;
+    align-items: start;
+}
+
+#resetButton {
+    outline: none;
+    width: 10%;
+    height: 25px;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+    background: rgb(37, 105, 105);
+    margin-left: -28%;
+}
+
+#resetButton:hover {
+    background: aqua;
+}
+
+@media screen and (max-width: 600px) 
+{
+  *{
+    width: 100%;
+  }
+
+  body{
+    background: rgb(14, 125, 145);
+    height: 500px;
+    margin: 0;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 360px;
+    z-index: 99;
+  
+    .container {
+      padding-top: 0;
+      padding-bottom: 10px;
+      display: flex;
+      z-index: -1;
+      justify-content: space-around;
+      max-width: 1600px;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 auto;
+    }
+
+    .ARIA {
+      text-decoration: none;
+      color: aqua;
+      margin-left:  -35%;
+      margin-top: 18%;
+    }
+
+    .ARIA h2 {
+      font-size: 5vh;
+      font-style: normal;
+    }
+
+    .tagline {
+      color: white;
+      margin-top: 15%;
+      margin-left: -70%;
+    }
+
+    #ARIA2 {
+      width: 40%;
+      height: 12vh;
+      position: relative;
+      margin-top: 10%;
+      margin-left: 5%;
+    }
+
+  }
+
+  .menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 98;
+    transition: all 0.4s;
+  }
+
+  
+  nav {
+    z-index: 99;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(127, 255, 212, 0.342);
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex ;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    text-align: center;
+    width: 100%;
+    align-items: center;
+  }
+  
+  nav ul li a {
+    background-color: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 4px 4px 2px;
+  }
+
+  nav ul li:hover a,
+  nav ul li.active a {
+    color: rgb(14, 125, 145);
+  }
+
+  .menu-bar a span {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    font-size: 15px;
+  }
+
+  .menu-bar li:hover a, 
+  .menu-bar li.active a {
+    transform: translateY(-5px);
+    font-size: 18px;
+  }
+
+  h5 {
+    display: none;
+  }
+
+  .container {
+    max-width: 360px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 90%;
+  }
+
+#calendarContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: -3%;
+}
+
+#calendarDiv{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 10px 20px 20px;;
+    align-content: center;
+    text-align: center;
+}
+
+#calendarHeading{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    padding: 0px 10px;
+    font-size: 20px;
+    background-color: rgb(37, 105, 105);
+    line-height: 0px;
+    color: white;
+}
+
+#calendarContent{
+    padding: 10px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.days{
+    display: flex;
+}
+
+.day{
+    width: 30px;
+    margin: 3px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+    /* background-color: aqua; */
+    /* border: 2px solid black; */
+}
+
+#title{
+    line-height: 10px;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: rgb(23, 86, 86);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin: 100px 20px 20px 80px;
+    width: inherit;
+}
+
+#subtitle{
+    font-size: 18px;
+    color: white;
+    margin-left: 0%;
+}
+
+.habitInput{
+    outline: none;
+    border-radius: 8px;
+    height: 100%;
+    font-size: 2.5vh;
+    background-color: rgb(37, 105, 105);
+    color: white;
+    border-color: aqua;
+}
+
+.habitName {
+    opacity: 0;
+    margin-left: -40%;
+    height: 100%;
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+}
+
+.habitName i {
+    width: 30%;
+}
+
+.name {
+    margin-left: -10%;
+}
+
+#resetButton {
+    outline: none;
+    width: 30%;
+    height: 25px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+    background: aqua;;
+    margin-left: 0%;
+}
+
+}
